@@ -1,0 +1,54 @@
+//My approach : used 3 loos so TC O(3N^2)
+
+class Solution {
+  public:
+    void printTriangle(int n) {
+        // code here
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=n-i;j>0;j--)
+            cout<<" ";
+            for(int j=1;j<=2*(i-1)+1;j++)
+            cout<<"*";
+            for(int j=n-i;j>0;j--)
+            cout<<" ";
+            cout<<endl;
+        }
+    }
+};
+
+
+
+//Other approach that dosen't these many loops .
+
+class Solution {
+  public:
+    void printTriangle(int n) {
+        // code here
+            for(int i = 0; i < n; i++)
+
+       {
+
+           for(int j = 0; j < (n+i); j++)
+
+           {
+
+               if(j < (n-1-i))
+
+               {
+
+                     cout<<" ";
+
+               }
+
+               else
+
+                     cout<<"*";
+
+           }
+
+            cout<<endl;
+
+       }
+    }
+};
